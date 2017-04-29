@@ -393,7 +393,7 @@ var App = {
   },
 
   init: function () {
-	  if (Lungo.Core.environment().os.name == null) {
+	  if (typeof Lungo.Core.environment().os.name == null) {
 		App.platform = "Browser";
 	  } else {
 		App.platform = Lungo.Core.environment().os.name;
