@@ -393,7 +393,11 @@ var App = {
   },
 
   init: function () {
-	App.platform = Lungo.Core.environment().os.name;
+	  if (App.platform = Lungo.Core.environment().os == null) {
+		App.platform = "Browser";
+	  } else {
+		App.platform = Lungo.Core.environment().os.name;
+	  }
 
     if (App.platform === "UbuntuTouch") {
       App.runtimeApi();
