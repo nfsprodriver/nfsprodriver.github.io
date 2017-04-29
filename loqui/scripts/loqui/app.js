@@ -394,7 +394,7 @@ var App = {
 
   init: function () {
 	if(Lungo.Core.environment().os == null) {
-		App.platform = "FirefoxOS";
+		App.platform = "Browser";
     } else {
 		App.platform = Lungo.Core.environment().os.name;
 	}
