@@ -533,7 +533,7 @@
       return _current.isMobile && _current.os.name !== "firefoxOS";
     };
     $$.environment = function() {
-      _current = _current || _detectEnvironment() || "Browser";
+      _current = _current || _detectEnvironment();
       return _current;
     };
     $$.isOnline = function() {
