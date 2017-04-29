@@ -1581,6 +1581,15 @@ pre code {
   max-height: 340px;
   overflow-y: scroll;
 }
+.background {
+  width: 100%;
+  min-height: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-image: url("../img/bg.JPG");
+}
 .container {
   padding-right: 15px;
   padding-left: 15px;
