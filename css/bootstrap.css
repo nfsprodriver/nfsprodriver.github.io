@@ -1589,6 +1589,8 @@ pre code {
   background-size: cover;
   -o-background-size: cover;
   background-image: url("../img/bg.JPG");
+  background-position: center;
+  background-attachment: fixed;
 }
 .container {
   padding-right: 15px;
