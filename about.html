@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="prefetch" type="application/l10n" href="l10n/main.ini" />
 
-    <title>About nfsprodriver's Website</title>
+    <title data-l10n-id="AboutTitle">About nfsprodriver's Website</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -39,19 +40,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Home</a>
+                <a class="navbar-brand" href="index.html" data-l10n-id="Home">Home</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="contents1.html">Contents</a>
+                        <a href="contents1.html" data-l10n-id="Contents">Contents</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="#" data-l10n-id="About">About</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.html" data-l10n-id="Contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +67,7 @@
         <!-- Introduction Row -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">About Me
+                <h1 class="page-header" data-l10n-id="About">About Me
                     <small></small>
                 </h1>
                 <p></p>
@@ -76,14 +77,14 @@
         <!-- Team Members Row -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">My Profile</h2>
+                <h2 class="page-header" data-l10n-id="MyProfile">My Profile</h2>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="img/pb.png" height="256" width="256">
                 <h3>Bjarne Roß
                     <small>nfsprodriver</small>
                 </h3>
-                <p>19, Student, Musician, Ubuntu Touch user and enthusiast in developing</p>
+                <p data-l10n-id="AboutDescription">19, Student, Musician, Ubuntu Touch user and enthusiast in developing</p>
             </div>
         </div>
 
@@ -108,6 +109,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+	
+	<script src="js/l10n.js"></script>
 
 </body>
 
