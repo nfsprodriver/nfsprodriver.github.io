@@ -35,13 +35,22 @@
 <body class="background">
 
   <script>
+	var init = '#home';
 	window.addEventListener('localized', function() {
 	  document.documentElement.lang = document.webL10n.getLanguage();
 	  document.documentElement.dir = document.webL10n.getDirection();
+	  $('body > :not(#navbar)').hide();
+	  $(init).show();
 	}, false);
+	
+	function toggle(div) {
+		init = div;
+		$('body > :not(#navbar)').hide();
+		$(div).show();
+	}
   </script>
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -51,19 +60,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" data-l10n-id="Home">Home</a>
+                <a class="navbar-brand" onclick="toggle('#home')" data-l10n-id="Home">Home</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="contents1.html" data-l10n-id="Contents">Contents</a>
+                        <a onclick="toggle('#contents1')" data-l10n-id="Contents">Contents</a>
                     </li>
                     <li>
-                        <a href="about.html" data-l10n-id="About">About</a>
+                        <a onclick="toggle('#about')" data-l10n-id="About">About</a>
                     </li>
                     <li>
-                        <a href="contact.html" data-l10n-id="Contact">Contact</a>
+                        <a onclick="toggle('#contact')" data-l10n-id="Contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -73,7 +82,7 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div id="home" class="container">
 
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -82,6 +91,140 @@
                 <ul class="list-unstyled">
                     <li>Bootstrap v3.3.7</li>
                     <li>jQuery v1.11.1</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+	
+    <div id="contents1" class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron hero-spacer">
+            <h1 data-l10n-id="Contents">Contents</h1>
+            <p data-l10n-id="Projects">See my projects below...</p>
+            <p><a class="btn btn-primary btn-large" href="https://github.com/nfsprodriver" data-l10n-id="Github">Github page</a>
+            </p>
+        </header>
+
+        <hr>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 data-l10n-id="LatestFeatures">Latest Features</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="loqui/img/icon-284.png" alt="" height="256" width="256">
+                    <div class="caption">
+                        <h3>LoquiIM</h3>
+                        <p data-l10n-id="Netscape">Needs netscape based browser (or supported devices).</p>
+                        <p>
+                            <a href="loqui/index.html" class="btn btn-primary">Start</a> <a href="loqui.im/index.html" class="btn btn-default" data-l10n-id="InfoPage">Info Page</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+			
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png" alt="" height="256" width="256">
+                    <div class="caption">
+                        <h3>uttweaks</h3>
+                        <p data-l10n-id="uttweaks">Some tweaks for Ubuntu Touch.</p>
+                        <p>
+                            <a href="https://github.com/nfsprodriver/uttweaks/archive/master.zip" class="btn btn-primary" data-l10n-id="Download">Download</a> <a href="https://www.github.com/nfsprodriver/uttweaks" class="btn btn-default" data-l10n-id="Github">Github Project</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+			
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="img/minetest.png" alt="" height="256" width="256">
+                    <div class="caption">
+                        <h3 data-l10n-id="MinetestPacks">Minetest texture packs</h3>
+                        <p data-l10n-id="MinetestDescription">Find some Minetest texture packs on github (old).</p>
+                        <p>
+                            <a href="https://github.com/nfsprodriver" class="btn btn-primary" data-l10n-id="Github">Go</a> <a href="http://www.minetest.net" class="btn btn-default" data-l10n-id="MinetestSite">Minetest page</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; nfsprodriver 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+	
+    <div id="about" class="container">
+
+        <!-- Introduction Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header" data-l10n-id="About">About Me
+                    <small></small>
+                </h1>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Team Members Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header" data-l10n-id="MyProfile">My Profile</h2>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="img/pb.png" height="256" width="256">
+                <h3>Bjarne Roß
+                    <small>nfsprodriver</small>
+                </h3>
+                <p data-l10n-id="AboutDescription">19, Student, Musician, Ubuntu Touch user and enthusiast in developing</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; nfsprodriver 2017</p>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+	
+    <div id="contact" class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 data-l10n-id="Contact">Contact</h1>
+                <p class="lead">Bjarne Roß</p>
+                <ul class="list-unstyled">
+                    <li><a href="mailto:nfsprodriver@t-online.de">nfsprodriver@t-online.de</a></li>
                 </ul>
             </div>
         </div>
