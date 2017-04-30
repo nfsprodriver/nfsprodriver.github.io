@@ -32,23 +32,28 @@
 
 </head>
 
-<body class="background">
-
   <script>
-	var init = '#home';
+	var start = '#home';
+	
+	function init() {
+	  $('body > :not(#navbar)').hide();
+	  $(start).show();
+	}
+	
 	window.addEventListener('localized', function() {
 	  document.documentElement.lang = document.webL10n.getLanguage();
 	  document.documentElement.dir = document.webL10n.getDirection();
-	  $('body > :not(#navbar)').hide();
-	  $(init).show();
 	}, false);
 	
 	function toggle(div) {
-		init = div;
+		start = div;
 		$('body > :not(#navbar)').hide();
 		$(div).show();
 	}
   </script>
+
+<body class="background" onload="init();">
+
     <!-- Navigation -->
     <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
