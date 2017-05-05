@@ -51,11 +51,13 @@
 </head>
 
   <script>
-	var start = '#home';
+	var startDiv = '#home';
+	var startButton= '#buttonHome';
 	
 	function init() {
 	  $('body > :not(#navigation)').hide();
-	  $(start).show();
+	  $(startDiv).show();
+	  $(startButton).addClass('btn-primary');
 	}
 	
 	window.addEventListener('localized', function() {
@@ -63,10 +65,13 @@
 	  document.documentElement.dir = document.webL10n.getDirection();
 	}, false);
 	
-	function toggle(div) {
-		start = div;
+	function toggle(div, button) {
+		startDiv = div;
+		startButton = button;
 		$('body > :not(#navigation)').hide();
 		$(div).show();
+		$('#buttonList > :not(button)').removeClass('btn-primary');
+		$(button).addClass('btn-primary');
 	}
   </script>
 
@@ -78,20 +83,20 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
-            <a class="navbar-brand" onclick="toggle('#home')" data-l10n-id="Home">Home</a>
+            <button class="navbar-brand btn btn-link" onclick="toggle('#home', '#buttonHome')" data-l10n-id="Home">Home</button>
             <div class="collapse navbar-collapse" id="navbarExample">
-				<ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <button class="btn btn-link" onclick="toggle('#home')" data-l10n-id="Home">Home <span class="sr-only">(current)</span></button>
+				<ul id="buttonList" class="navbar-nav ml-auto">
+                    <li id="buttonHome" class="nav-item active">
+                        <button class="btn btn-link" onclick="toggle('#home', '#buttonHome')" data-l10n-id="Home">Home</button>
                     </li>
-                    <li class="nav-item">
-                        <button class="btn btn-link" onclick="toggle('#contents1')" data-l10n-id="Contents">Contents</button>
+                    <li id="buttonContents1" class="nav-item">
+                        <button class="btn btn-link" onclick="toggle('#contents1', '#buttonContents1')" data-l10n-id="Contents">Contents</button>
                     </li>
-                    <li class="nav-item">
-                        <button class="btn btn-link" onclick="toggle('#about')" data-l10n-id="About">About</button>
+                    <li id="buttonAbout" class="nav-item">
+                        <button class="btn btn-link" onclick="toggle('#about', '#buttonAbout')" data-l10n-id="About">About</button>
                     </li>
-                    <li class="nav-item">
-                        <button class="btn btn-link" onclick="toggle('#contact')" data-l10n-id="Contact">Contact</button>
+                    <li id="buttonContact" class="nav-item">
+                        <button class="btn btn-link" onclick="toggle('#contact', '#buttonContact')" data-l10n-id="Contact">Contact</button>
                     </li>
                 </ul>
             </div>
