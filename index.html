@@ -5,9 +5,9 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="nfsprodriver">
+    <meta name="author" content="Bjarne Roß">
     <link rel="prefetch" type="application/l10n" href="l10n/main.ini" />
 
     <title>nfsprodriver's Website</title>
@@ -15,11 +15,29 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    
+
+    <!-- Custom styles for this template -->
     <style>
     body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        padding-top: 54px;
+    }
+    
+    @media (min-width: 992px) {
+        body {
+            padding-top: 56px;
+        }
+    }
+    /* Temporary navbar container fix */
+    
+    .navbar-toggler {
+        z-index: 1;
+    }
+    
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
     }
     </style>
 
@@ -36,7 +54,7 @@
 	var start = '#home';
 	
 	function init() {
-	  $('body > :not(#navbar)').hide();
+	  $('body > :not(#navigation)').hide();
 	  $(start).show();
 	}
 	
@@ -47,7 +65,7 @@
 	
 	function toggle(div) {
 		start = div;
-		$('body > :not(#navbar)').hide();
+		$('body > :not(#navigation)').hide();
 		$(div).show();
 	}
   </script>
@@ -55,35 +73,29 @@
 <body class="background" onload="init();">
 
     <!-- Navigation -->
-    <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse" id="navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" onclick="toggle('#home')" data-l10n-id="Home">Home</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a onclick="toggle('#contents1')" data-l10n-id="Contents">Contents</a>
+            <a class="navbar-brand" onclick="toggle('#home')" data-l10n-id="Home">Home</a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+				<ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <button class="btn btn-link" onclick="toggle('#home')" data-l10n-id="Home">Home <span class="sr-only">(current)</span></button>
                     </li>
-                    <li>
-                        <a onclick="toggle('#about')" data-l10n-id="About">About</a>
+                    <li class="nav-item">
+                        <button class="btn btn-link" onclick="toggle('#contents1')" data-l10n-id="Contents">Contents</button>
                     </li>
-                    <li>
-                        <a onclick="toggle('#contact')" data-l10n-id="Contact">Contact</a>
+                    <li class="nav-item">
+                        <button class="btn btn-link" onclick="toggle('#about')" data-l10n-id="About">About</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-link" onclick="toggle('#contact')" data-l10n-id="Contact">Contact</button>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 
     <!-- Page Content -->
@@ -94,8 +106,8 @@
                 <h1>nfsprodriver's Website</h1>
                 <p class="lead" data-l10n-id="Welcome">Welcome to my brand new Website. Click "Contents" to see my projects. Have a great time!</p>
                 <ul class="list-unstyled">
-                    <li>Bootstrap v3.3.7</li>
-                    <li>jQuery v1.11.1</li>
+                    <li>Bootstrap 4.0.0-alpha.6</li>
+                    <li>jQuery 3.2.1</li>
                 </ul>
             </div>
         </div>
@@ -126,54 +138,54 @@
         <!-- Page Features -->
         <div class="row text-center">
 
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="loqui/img/icon-284.png" alt="" height="256" width="256">
-                    <div class="caption">
-                        <h3>LoquiIM</h3>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid d-block mx-auto" src="loqui/img/icon-284.png" alt="" height="256" width="256">
+                    <div class="card-block">
+                        <h4>LoquiIM</h4>
                         <p data-l10n-id="Netscape">Needs netscape based browser (or supported devices).</p>
-                        <p>
-                            <a href="loqui/index.html" class="btn btn-primary">Start</a> <a href="loqui.im/index.html" class="btn btn-default" data-l10n-id="InfoPage">Info Page</a>
-                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="loqui/index.html" class="btn btn-primary">Start</a> <a href="loqui.im/index.html" class="btn btn-info" data-l10n-id="InfoPage">Info Page</a>
                     </div>
                 </div>
             </div>
 			
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png" alt="" height="256" width="256">
-                    <div class="caption">
-                        <h3>uttweaks</h3>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid d-block mx-auto" src="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png" alt="" height="256" width="256">
+                    <div class="card-block">
+                        <h4>uttweaks</h4>
                         <p data-l10n-id="uttweaks">Some tweaks for Ubuntu Touch.</p>
-                        <p>
-                            <a href="https://github.com/nfsprodriver/uttweaks/archive/master.zip" class="btn btn-primary" data-l10n-id="Download">Download</a> <a href="https://www.github.com/nfsprodriver/uttweaks" class="btn btn-default" data-l10n-id="Github">Github Project</a>
-                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/nfsprodriver/uttweaks/archive/master.zip" class="btn btn-primary" data-l10n-id="Download">Download</a> <a href="https://www.github.com/nfsprodriver/uttweaks" class="btn btn-info" data-l10n-id="Github">Github Project</a>
                     </div>
                 </div>
             </div>
 			
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="img/minetest.png" alt="" height="256" width="256">
-                    <div class="caption">
-                        <h3 data-l10n-id="MinetestPacks">Minetest texture packs</h3>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid d-block mx-auto" src="img/minetest.png" alt="" height="256" width="256">
+                    <div class="card-block">
+                        <h4 data-l10n-id="MinetestPacks">Minetest texture packs</h4>
                         <p data-l10n-id="MinetestDescription">Find some Minetest texture packs on github (old).</p>
-                        <p>
-                            <a href="https://github.com/nfsprodriver" class="btn btn-primary" data-l10n-id="Github">Go</a> <a href="http://www.minetest.net" class="btn btn-default" data-l10n-id="MinetestSite">Minetest page</a>
-                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://github.com/nfsprodriver" class="btn btn-primary" data-l10n-id="Github">Go</a> <a href="http://www.minetest.net" class="btn btn-info" data-l10n-id="MinetestSite">Minetest page</a>
                     </div>
                 </div>
             </div>
 			
-            <div class="col-md-3 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="img/moodle.png" alt="" height="256" width="256">
-                    <div class="caption">
-                        <h3>Moodle Mobile</h3>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top img-fluid d-block mx-auto" src="img/moodle.png" alt="" height="256" width="256">
+                    <div class="card-block">
+                        <h4>Moodle Mobile</h4>
                         <p data-l10n-id="MoodleDescription">Version 3.2.1 for Ubuntu Touch (Cordova). File exchange not working!</p>
-                        <p>
-                            <a href="files/com.moodle.moodlemobile_3.2.1_armhf.click" class="btn btn-primary" data-l10n-id="Download">Download</a> <a href="https://github.com/moodlehq/moodlemobile2" class="btn btn-default" data-l10n-id="Github">Github page</a>
-                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="files/com.moodle.moodlemobile_3.2.1_armhf.click" class="btn btn-primary" data-l10n-id="Download">Download</a> <a href="https://github.com/moodlehq/moodlemobile2" class="btn btn-info" data-l10n-id="Github">Github page</a>
                     </div>
                 </div>
             </div>
@@ -184,13 +196,12 @@
         <hr>
 
         <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Bjarne Roß 2017</p>
-                </div>
-            </div>
-        </footer>
+		<footer class="py-5 bg-inverse">
+			<div class="container">
+				<p class="m-0 text-center text-white">Copyright &copy; Bjarne Roß 2017</p>
+			</div>
+			<!-- /.container -->
+		</footer>
 
     </div>
 	
@@ -199,7 +210,7 @@
         <!-- Introduction Row -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header" data-l10n-id="About">About Me
+                <h1 class="my-4" data-l10n-id="About">About Me
                     <small></small>
                 </h1>
                 <p></p>
@@ -208,30 +219,27 @@
 
         <!-- Team Members Row -->
         <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header" data-l10n-id="MyProfile">My Profile</h2>
-            </div>
-            <div class="col-lg-4 col-sm-6 text-center thumbnail">
-                <img class="img-responsive img-center" src="img/pb.png" height="256" width="256">
-                <h3>Bjarne Roß
-                    <small>nfsprodriver</small>
-                </h3>
-                <p data-l10n-id="AboutDescription">19, Student, Musician, Ubuntu Touch user and enthusiast in developing</p>
+            <div class="card col-lg-12">
+                <h2 class="my-4" data-l10n-id="MyProfile">My Profile</h2>
+				<div class="card-footer col-lg-4 col-sm-6 text-center mb-4">
+					<img class="img-fluid d-block mx-auto" src="img/pb.png" height="256" width="256">
+					<h3>Bjarne Roß
+						<small>nfsprodriver</small>
+					</h3>
+					<p data-l10n-id="AboutDescription">19, Student, Musician, Ubuntu Touch user and enthusiast in developing</p>
+				</div>
             </div>
         </div>
 
         <hr>
 
         <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Bjarne Roß 2017</p>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </footer>
+        <footer class="py-5 bg-inverse">
+			<div class="container">
+				<p class="m-0 text-center text-white">Copyright &copy; Bjarne Roß 2017</p>
+			</div>
+			<!-- /.container -->
+		</footer>
 
     </div>
 	
@@ -251,10 +259,9 @@
     </div>
     <!-- /.container -->
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	
 	<script src="js/l10n.js"></script>
