@@ -56,11 +56,12 @@
 	var startDiv = '#home';
 	var startButton= '#buttonHome';
 	
-	function init() {
-	  $('body > :not(#navigation)').hide();
-	  $(startDiv).show();
-	  $(startButton).addClass('btn-primary');
-	}
+	document.onreadystatechange = function(e)
+		{
+			$('body > :not(#navigation)').hide();
+			$(startDiv).show();
+			$(startButton).addClass('btn-primary');
+		};
 	
 	window.addEventListener('localized', function() {
 	  document.documentElement.lang = document.webL10n.getLanguage();
@@ -77,7 +78,7 @@
 	}
   </script>
 
-<body class="background" onload="init();">
+<body class="background">
 
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse" id="navigation">
@@ -222,6 +223,9 @@
 		<div class="row">
             <div class="col-lg-12 text-center">
                 <h1 data-l10n-id="Contents2">Music</h1>
+				<video width="640" height="360" autoplay loop muted>
+					<source src="img/leslie.MP4" type="video/mp4">
+				</video>
                 <p data-l10n-id="ToBeAdded">To be continued...</p>
             </div>
         </div>
