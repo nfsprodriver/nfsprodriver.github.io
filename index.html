@@ -51,7 +51,7 @@
 	
 	document.onreadystatechange = function(e)
 		{
-			$('body > :not(#navigation,#logo)').hide();
+			$('body > :not(#navigation)').hide();
 			$(startDiv).show();
 			$(startButton).addClass('btn-primary');
 		};
@@ -64,7 +64,7 @@
 	function toggle(div, button) {
 		startDiv = div;
 		startButton = button;
-		$('body > :not(#navigation,#logo)').hide();
+		$('body > :not(#navigation)').hide();
 		$(div).show();
 		$('#buttonList > :not(button)').removeClass('btn-primary');
 		$(button).addClass('btn-primary');
@@ -73,9 +73,6 @@
 
 <body class="background">
 	
-	<a id="logo" onclick="toggle('#home', '#buttonHome')">
-		<img class="img-thumbnail fixed-top" src="img/logo.png" style="width:52px; height:52px;z-index:1100;" alt="">
-	</a>
 
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse" id="navigation">
@@ -83,6 +80,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
+			<a onclick="toggle('#home', '#buttonHome')">
+				<img class="img-thumbnail fixed-top" src="img/logo.png" style="width:52px; height:52px;z-index:1100;" alt="">
+			</a>
             <img src="img/tansparent.png" height="38">
             <div class="collapse navbar-collapse" id="navbarExample">
 				<ul id="buttonList" class="navbar-nav ml-auto">
