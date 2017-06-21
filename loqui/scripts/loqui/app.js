@@ -32,13 +32,13 @@ var App = {
   * @type {string}
   * @const
   */
-  version: 'v0.5.17',
+  version: '$(Loqui.Version)',
 
   /**
   * @type {String}
   * @const
   */
-  minorVersion: '',
+  minorVersion: '$(Loqui.MinorVersion)',
 
   platform: '',
 
@@ -393,11 +393,7 @@ var App = {
   },
 
   init: function () {
-	  if (Lungo.Core.environment().os == null) {
-		App.platform = "Browser";
-	  } else {
-		App.platform = Lungo.Core.environment().os.name;
-	  }
+	App.platform = Lungo.Core.environment().os.name;
 
     if (App.platform === "UbuntuTouch") {
       App.runtimeApi();
