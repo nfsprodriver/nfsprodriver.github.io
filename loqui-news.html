@@ -2,13 +2,13 @@
 	<head>
 	    <link rel="prefetch" type="application/l10n" href="l10n/main.ini" />
 	</head>
+	<script>
+		window.addEventListener('localized', function() {
+		  document.documentElement.lang = document.webL10n.getLanguage();
+		  document.documentElement.dir = document.webL10n.getDirection();
+		}, false);
+	</script>
 	<body>
-		<script>
-			window.addEventListener('localized', function() {
-			  document.documentElement.lang = document.webL10n.getLanguage();
-			  document.documentElement.dir = document.webL10n.getDirection();
-			}, false);
-		</script>
 		<ul id="news">
 		    <script>
 				window.addEventListener('localized', function() {
