@@ -1,11 +1,22 @@
 <html>
+	<head>
+		<meta charset="utf-8">
+	    <link rel="prefetch" type="application/l10n" href="l10n/main.ini" />
+	</head>
+	<script>
+		window.addEventListener('localized', function() {
+		  document.documentElement.lang = document.webL10n.getLanguage();
+		  document.documentElement.dir = document.webL10n.getDirection();
+		}, false);
+	</script>
 	<body>
-		<div id="de-de">
-			<ul id="news">
-				</script>
-				<li>WhatsApp support verlängert bis 2018!</li>
-			</ul>
-			<p id="latestver" >(neuste 0.5.21)</p>
-		</div>
+		<ul id="news">
+			</script>
+			<li data-l10n-id="News1">WhatsApp support extended until end of 2018!</li>
+		</ul>
+		<p id="latestver" data-l10n-id="Version">
+			(latest 0.5.21)
+		</p>
+		<script src="js/l10n.js"></script>
 	</body>
 </html>
