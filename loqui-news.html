@@ -1,13 +1,11 @@
 <html>
 	<head>
-	    <link rel="prefetch" type="application/l10n" href="l10n/main.ini" />
 	</head>
 	<script>
 		window.addEventListener('localized', function() {
 		  document.documentElement.lang = document.webL10n.getLanguage();
 		  document.documentElement.dir = document.webL10n.getDirection();
 		  document.getElementById("News1").innerHTML=document.webL10n.getLanguage();
-		  console.log(document.webL10n.getLanguage());
 		}, false);
 	</script>
 	<body>
@@ -17,6 +15,7 @@
 		<p id="latestver" data-l10n-id="Version">
 			(latest 0.5.21)
 		</p>
+	    <link rel="prefetch" type="application/l10n" href="l10n/main.ini" />
 		<script type="text/javascript" src="js/l10n.js"></script>
 		<script type="text/javascript" src="scripts/fabi1cazenave/l10n.js"></script>
 	</body>
