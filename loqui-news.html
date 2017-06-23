@@ -1,30 +1,12 @@
 <html>
-	<head>
-	    <link rel="prefetch" type="application/l10n" href="l10n/main.ini" />
-	</head>
-	<script>
-		window.addEventListener('localized', function() {
-		  document.documentElement.lang = document.webL10n.getLanguage();
-		  document.documentElement.dir = document.webL10n.getDirection();
-		  
-		  var news1text;
-		  if(document.webL10n.getLanguage() == 'de-de') {
-			news1text = 'Deutsch';
-		  } else {
-			news1text = 'English';
-		  }
-		  
-		  document.getElementById("News1").innerHTML=news1text;
-		}, false);
-	</script>
 	<body>
-		<ul id="news">
-			<li id="News1"></li>
-		</ul>
-		<p id="latestver" data-l10n-id="Version">
-			(latest 0.5.21)
-		</p>
-		<script type="text/javascript" src="js/l10n.js"></script>
-		<script type="text/javascript" src="scripts/fabi1cazenave/l10n.js"></script>
+		<div id="de-de">
+			<ul id="news">
+				</script>
+				<li>WhatsApp support verlängert bis 2018!</li>
+			</ul>
+			<p id="latestver" >(neuste 0.5.21)</p>
+		</div>
+		<script src="js/l10n.js"></script>
 	</body>
 </html>
