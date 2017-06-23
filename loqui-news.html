@@ -6,7 +6,7 @@
 		window.addEventListener('localized', function() {
 		  document.documentElement.lang = document.webL10n.getLanguage();
 		  document.documentElement.dir = document.webL10n.getDirection();
-		  document.getElementById("News1").innerHTML= document.webL10n.get('News1');
+		  document.getElementById("News1").innerHTML=document.webL10n.getLanguage();
 		}, false);
 	</script>
 	<body>
