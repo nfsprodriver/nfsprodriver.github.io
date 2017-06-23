@@ -6,12 +6,13 @@
 		window.addEventListener('localized', function() {
 		  document.documentElement.lang = document.webL10n.getLanguage();
 		  document.documentElement.dir = document.webL10n.getDirection();
+		  document.getElementById("News1").innerHTML= document.webL10n.get('News1');
 		}, false);
 	</script>
 	<body>
 		<ul id="news">
 			</script>
-			<li data-l10n-id="News1">WhatsApp support extended until end of 2018!</li>
+			<li id="News1"></li>
 		</ul>
 		<p id="latestver" data-l10n-id="Version">
 			(latest 0.5.21)
