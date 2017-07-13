@@ -40,7 +40,7 @@
 	    <div>
 	      <a href="https://www.github.com/loqui/im/releases" target="_blank"><figure>
 	        <img src="img/getit.png" alt="Get it in the Firefox Marketplace or Ubuntu Store" height="67" width="191" />
-	        <figcaption>v0.5.19 beta<br /><small>Click to see version history</small></figcaption>
+	        <figcaption><br /><small id="latestVersion"></small><small>Click to see version history</small></figcaption>
 	      </figure></a>
 	    </div>
 	  </article>
@@ -68,17 +68,6 @@
 	</section>
 	<section id="features"></section>
 	<section id="blog">
-	  <article>
-	    <header>
-	      <h2>Deprecation of S40 devices</h2>
-	      <span>Written by <a href="http://github.com/nfsprodriver" target="_blank">nfsprodriver</a> on May. 19, 2017</span>
-	    </header>
-	    <p>Due to WhatsApp is going to deprecate the support for older devices, such as S40 loqui is emulating, in the end of June series 0.5.* we're still using is going not to work anymore. 
-					We even realize some effects of that descission by now. So if your loqui gets more and more stucky, that's normal. Before asking questions (belonging to that), please have a look 
-					the <a href="https://www.github.com/loqui/im/issues">github issues</a> first. Now we need all help we can get by implementing the noise protocol and everything depending on that 
-					to reanimate this long project again. Post your suggestions or even solution to the <a href="https://github.com/loqui/im/projects/1">project 0.6</a>! But of course in all cases we're 
-					willing to help you at any questions :D Happy messaging!</p>
-	  </article>
 	  <article>
 	    <header>
 	      <h2>New Transport Protocol Based On Noise Pipes</h2>
@@ -255,6 +244,8 @@ the servers and networking infrastructure.</p>
 	<!--<footer>© The Loqui Community,</footer>-->
 	<script type="text/javascript" src="js/quo.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script>$("#latestVersion").load("https://nfsprodriver.github.io/loqui-news.html #latestver");</script>
 </body>
 
 <!-- Mirrored from loqui.im/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Apr 2017 02:41:18 GMT -->
