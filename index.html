@@ -76,15 +76,15 @@
 
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-toggleable-md bg-dark" id="navigation">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="container">
 			<a onclick="toggle('#home', '#buttonHome')">
 				<img class="img-thumbnail fixed-top nav" src="img/logo.png" style="width:52px; height:52px;z-index:1100;" alt="">
 			</a>
-            <div class="container fixed-top navbar-collapse" id="navbarExample">
-				<ul id="buttonList" class="navbar ml-auto">
+			<button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon text-white" data-l10n-id="Menu">Menu</span>
+			</button>
+            <div class="collapse navbar-collapse" id="navbarExample">
+				<ul id="buttonList" class="navbar navbar-nav ml-auto">
                     <li id="buttonHome" class="nav">
                         <button class="btn btn-success" onclick="toggle('#home', '#buttonHome')" data-l10n-id="Home" data-toggle="dropdown" data-target="#navbarExample">Home</button>
                     </li>
