@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<style>
+iframe {
+height: 560px;
+width: 1000px;
+position: relative;
+left: -220px;
+top: -60px;
+} 
+</style>
+
+<iframe id="chess" src="http://www.schach-spielen.eu/schach-online-spielen" frameborder="0" scrolling="no"></iframe>
+
+<script>
+var game = prompt("Starte ein neues Spiel oder Tritt einem Bestehendem bei! Spiel-URL, um beizutreten:", "http://www.schach-spielen.eu/schach-online-spielen");
+if (game != null) document.getElementById('chess').src = game;
+</script>
+</body>
+</html>
