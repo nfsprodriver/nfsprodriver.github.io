@@ -8,15 +8,26 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Startseite - nfsprodriver</title>
+    <title>Kontakt - nfsprodriver</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/full-width-pics.css" rel="stylesheet">
     <link href="css/logo-nav.css" rel="stylesheet">
     <link href="css/full.css" rel="stylesheet">
+	
+    <style>
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
+
+    </style>
 
   </head>
 
@@ -33,10 +44,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Startseite
-                <span class="sr-only">(current)</span>
-              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Startseite</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="software.html">Software</a>
@@ -47,35 +56,30 @@
             <li class="nav-item">
               <a class="nav-link" href="about.html">Über mich</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Kontakt</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.html">Kontakt
+                <span class="sr-only">(current)</span>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Header - set the background image for the header in the line below -->
-    <header class="py-5 bg-image-full" style="background-image: url('img/bg.jpg');">
-      <img class="img-fluid d-block mx-auto" src="https://avatars0.githubusercontent.com/u/6537842?s=460&v=4" alt="">
-    </header>
-
-    <!-- Content section -->
-    <section class="py-5">
-      <div class="container">
-        <h1>Herzlich Willkommen</h1>
-        <p class="lead">... auf meiner brandneuen Website!</p>
-        <p>Schauen Sie sich gerne oben in den Kategorien um.</p>
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">Kontakt</h1>
+          <p class="lead">Bjarne Roß</p>
+          <ul class="list-unstyled">
+            <li><a href="mailto:nfsprodriver@t-online.de">nfsprodriver@t-online.de</a></li>
+            <li>Bootstrap 4.0.0</li>
+            <li>jQuery 3.3.1</li>
+          </ul>
+        </div>
       </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; nfsprodriver 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

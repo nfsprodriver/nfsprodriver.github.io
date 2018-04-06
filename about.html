@@ -8,13 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Startseite - nfsprodriver</title>
+    <title>Über mich - nfsprodriver</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/full-width-pics.css" rel="stylesheet">
+    <link href="css/round-about.css" rel="stylesheet">
     <link href="css/logo-nav.css" rel="stylesheet">
     <link href="css/full.css" rel="stylesheet">
 
@@ -33,10 +33,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Startseite
-                <span class="sr-only">(current)</span>
-              </a>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Startseite</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="software.html">Software</a>
@@ -44,8 +42,10 @@
             <li class="nav-item">
               <a class="nav-link" href="music.html">Musik</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">Über mich</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="about.html">Über mich
+                <span class="sr-only">(current)</span>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Kontakt</a>
@@ -55,22 +55,34 @@
       </div>
     </nav>
 
-    <!-- Header - set the background image for the header in the line below -->
-    <header class="py-5 bg-image-full" style="background-image: url('img/bg.jpg');">
-      <img class="img-fluid d-block mx-auto" src="https://avatars0.githubusercontent.com/u/6537842?s=460&v=4" alt="">
-    </header>
+    <!-- Page Content -->
+    <div class="container">
 
-    <!-- Content section -->
-    <section class="py-5">
-      <div class="container">
-        <h1>Herzlich Willkommen</h1>
-        <p class="lead">... auf meiner brandneuen Website!</p>
-        <p>Schauen Sie sich gerne oben in den Kategorien um.</p>
+      <!-- Introduction Row -->
+      <h1 class="my-4">Über mich
+        <small></small>
+      </h1>
+      <p></p>
+
+      <!-- Team Members Row -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="my-4">Mein Profil</h2>
+        </div>
+        <div class="col-lg-4 col-sm-6 text-center mb-4">
+          <img class="rounded-circle img-fluid d-block mx-auto" src="img/pb.jpg" alt="">
+          <h3>Bjarne Roß
+            <small><a href="https://github.com/nfsprodriver">nfsprodriver</a></small>
+          </h3>
+          <p>20, Student, Musiker, Entwickler (Anfänger)</p>
+        </div>
       </div>
-    </section>
+
+    </div>
+    <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-dark fixed-bottom">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; nfsprodriver 2018</p>
       </div>
