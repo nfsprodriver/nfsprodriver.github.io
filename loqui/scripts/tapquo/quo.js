@@ -520,13 +520,14 @@
     _current = null;
     IS_WEBKIT = /WebKit\/([\d.]+)/;
     SUPPORTED_OS = {
-      Android: /(Android)\s+([\d.]+)/,
+      //Android: /(Android)\s+([\d.]+)/,
       ipad: /(iPad).*OS\s([\d_]+)/,
       iphone: /(iPhone\sOS)\s([\d_]+)/,
       Blackberry: /(BlackBerry|BB10|Playbook).*Version\/([\d.]+)/,
       FirefoxOS: /(Mozilla).*(\(Mobile)[^\/]*\/([\d\.]*)/,
       webOS: /(webOS|hpwOS)[\s\/]([\d.]+)/,
-      UbuntuTouch: /(Mozilla).*(\(Linux)[^\/]*\/([\d\.]*)/
+      UbuntuTouch: /(Mozilla).*(\(Linux)[^\/]*\/([\d\.]*)/,
+      PC: /(Mozilla).*/
     };
     $$.isMobile = function() {
       _current = _current || _detectEnvironment();

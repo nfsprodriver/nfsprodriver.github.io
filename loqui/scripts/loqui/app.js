@@ -32,7 +32,7 @@ var App = {
   * @type {string}
   * @const
   */
-  version: 'v0.6.1',
+  version: 'v0.6.3',
 
   /**
   * @type {String}
@@ -395,9 +395,6 @@ var App = {
   init: function () {
 	App.platform = Lungo.Core.environment().os.name;
 
-    if (App.platform === "UbuntuTouch") {
-      App.runtimeApi();
-	  }
     App.defaults.Connector.presence.status = _('DefaultStatus', {
       app: App.name,
       platform: (Lungo.Core.environment().os ? Lungo.Core.environment().os.name : 'PC')
