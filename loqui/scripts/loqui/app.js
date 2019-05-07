@@ -1,4 +1,4 @@
-/* global Store, Account, Chat, Messenger, Accounts, Menu, Tools, Lungo, Make, ChatCore, CosemeConnectorHelper, emojione */
+/* global Store, Account, Chat, Messenger, Accounts, Menu, Tools, Lungo, Make, ChatCore, CosemeConnectorHelper, emojione, external */
 
 /**
  * @file Holds {@link App}
@@ -32,7 +32,7 @@ var App = {
   * @type {string}
   * @const
   */
-  version: 'v0.6.3',
+  version: 'v0.6.4',
 
   /**
   * @type {String}
@@ -393,7 +393,7 @@ var App = {
   },
 
   init: function () {
-	App.platform = Lungo.Core.environment().os.name;
+	App.platform = (Lungo.Core.environment().os ? Lungo.Core.environment().os.name : 'PC');
 
     App.defaults.Connector.presence.status = _('DefaultStatus', {
       app: App.name,

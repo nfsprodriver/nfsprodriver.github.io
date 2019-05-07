@@ -526,7 +526,7 @@
       Blackberry: /(BlackBerry|BB10|Playbook).*Version\/([\d.]+)/,
       FirefoxOS: /(Mozilla).*(\(Mobile)[^\/]*\/([\d\.]*)/,
       webOS: /(webOS|hpwOS)[\s\/]([\d.]+)/,
-      UbuntuTouch: /(Mozilla).*/
+      UbuntuTouch: /(Mozilla).*(\(Linux)[^\/]*\/([\d\.]*)/
     };
     $$.isMobile = function() {
       _current = _current || _detectEnvironment();
@@ -569,7 +569,7 @@
         if (supported) {
           detected_os = {
             name: (os === "iphone" || os === "ipad" ? "ios" : os),
-            //version: supported[2].replace("_", ".")
+            version: supported[2].replace("_", ".")
           };
           break;
         }
